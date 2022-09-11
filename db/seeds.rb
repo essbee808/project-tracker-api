@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+Category.create(name: "Non-Profit Projects");
+
+Project.create(
+    name: "Project Test 1",
+    objective: "Created to make sure that this works...",
+    why: "It's the first piece of data.",
+    learn: "Create Rails API",
+    category_id: 1
+)
