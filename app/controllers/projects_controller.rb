@@ -3,9 +3,15 @@ class ProjectsController < ApplicationController
 
   # GET /projects
   def index
-    @projects = Project.all
+    if params[:category_id]
+      set_category
+      @projects = @category.projects
+      render json: @projects
 
-    render json: @projects
+    else
+      @projects = Project.all
+      render json: @projects
+    end
   end
 
   # GET /projects/1
@@ -15,7 +21,12 @@ class ProjectsController < ApplicationController
 
   # POST /projects
   def create
-    @project = Project.new(project_params)
+    if params[:category_id]
+      @category = Category.find_by(id: params[:category_id])
+      @project = @category.projects.build(project_params)
+    else
+      @project = Project.new(project_params)
+    end
 
     if @project.save
       render json: @project, status: :created, location: @project
@@ -42,6 +53,10 @@ class ProjectsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_project
       @project = Project.find(params[:id])
+    end
+
+    def set_category
+      @category = Category.find_by_id(params[:category_id])
     end
 
     # Only allow a list of trusted parameters through.

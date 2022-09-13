@@ -7,6 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 Category.create(name: "Non-Profit Projects");
+Category.create(name: "Games");
 
 Project.create(
     name: "Project Test 1",
