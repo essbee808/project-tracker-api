@@ -1,24 +1,23 @@
-# README
+# Welcome to Project Tracker API! (Flatiron School Phase 5 Porfolio Project)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Project Tracker is a fullstack web application designed for users to log and manage ideas. 
 
-Things you may want to cover:
+Technologies used: 
+- React/Redux to build components
+- React Bootstrap for styling
+- Rails API
 
-* Ruby version
+# Installation
+* Clone this repo and [frontend repo](https://github.com/essbee808/project-tracker-client)
+* Run bundle
+* Run rails s
+* Open browser
+* Go to localhost:3000
 
-* System dependencies
+# Contributing #
+Bug reports and pull requests are welcome on Github at https://github.com/essbee808/project-tracker-api
 
-* Configuration
+# License #
+The project is available as open source under the terms of the MIT License
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
